@@ -1,0 +1,108 @@
+@domain = http://localhost:5000/api/v1
+
+### Test for wrong rotue ####
+GET {{domain}}/wrong-route
+
+### GET ALL USERS ###
+GET {{domain}}/users/afd
+
+### GET Single USER ###
+GET {{domain}}/users/2B4589AF-EC08-4BC4-8ADF-27380FD16959
+
+### POST Create USER ###
+POST {{domain}}/users
+Content-Type:  application/json
+
+{
+  "username": "nino",
+  "email": "nino@example.com",
+  "password": "n1235"
+}
+
+### PUT Update USER ###
+PUT {{domain}}/users/932B975D-122D-45FA-AF5E-36422594A6C0
+Content-Type:  application/json
+
+{
+  "username": "jokerbanny",
+  "email": "jokerbanny@gamil.com",
+  "gender": "male",
+  "age": true,
+  "phone": "95304119"
+}
+
+### DELETE User ####
+DELETE {{domain}}/users/2473F27A-8603-4DD3-8828-CCEA5178E659
+
+
+### GET ALL ADDRESSES ###
+GET {{domain}}/addresses
+
+### GET Single ADDRESS ###
+GET {{domain}}/addresses/EDDEF088-05AE-45E2-8A68-3E5FF61A8270
+
+### POST Create USER ###
+POST {{domain}}/addresses
+Content-Type:  application/json
+
+{
+
+  "district": "aafl-fadlf",
+  "village":  "parkbong",
+  "city": "parksong",
+  "province": "salavan",
+  "homeNo": "32"
+}
+
+### PUT Create USER ###
+PUT {{domain}}/addresses/EDDEF088-05AE-45E2-8A68-3E5FF61A8270
+Content-Type:  application/json
+
+{
+
+  "district": "DALKF-223",
+  "village":  "Huaykong",
+  "city": "paksong",
+  "province": "Champasak"
+}
+
+### DELETE ADDRESS ####
+DELETE {{domain}}/addresses/2473F27A-8603-4DD3-8828-CCEA5178E65
+
+### POST User Register ###
+POST {{domain}}/auth/register
+Content-Type:  application/json
+
+{
+  "username": "jokerbanny",
+  "email": "jokerbanny@example.com",
+  "password": "j123"
+}
+
+### POST User Register ###
+POST {{domain}}/auth/login
+Content-Type:  application/json
+
+{
+  "email": "jokerbanny@example.com",
+  "password": "j123"
+}
+
+### GET User Logout ####
+GET {{domain}}/auth/logout
+
+### GET User Get My Account ####
+GET {{domain}}/auth/account
+
+### PUT User Update Account Detailt ####
+PUT  {{domain}}/auth/update-details
+Content-Type:  application/json
+
+{
+  "fName": "joker",
+  "lname": "banny",
+  "username": "jokerbanny",
+  "email": "jokerbanny@example.com",
+  "password": "jb1235",
+  "phone": "+8562099981992"
+}
